@@ -1,14 +1,12 @@
 library(shiny)
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-  # Expression that generates a histogram. The expression is
-  # wrapped in a call to renderPlot to indicate that:
-  #
-  #  1) It is "reactive" and therefore should be automatically
-  #     re-executed when inputs change
-  #  2) Its output type is a plot
+  # This function reads a CSV file from baseball-reference.com
+  # It then extracts key data from the CSV by year
+  # The year is provided via a slider input in the ui.R file
+  # Finally it calculates the pythagorean expected wins for the year, 
+  #  see slidify presentation for further information
   
   
   data <- read.csv("phillies_data.csv")

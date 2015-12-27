@@ -17,7 +17,7 @@ shinyUI(fluidPage(
       selectInput("datatype", "Datatype?", choices = c("Wins","Losses","Attendance","Runs","Runs Against"))
     ),
 
-    # Show a plot of the generated distribution
+    # mainpanel to reflect the outputed data
     mainPanel(
       img(src='logo.jpg', align = "right",height=100,width=100),
       h2("In:"),
